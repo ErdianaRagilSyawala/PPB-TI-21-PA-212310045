@@ -1,27 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Image, Text, View, } from 'react-native';
+// import { StatusBar } from 'expo-status-bar';
+// import { Text, View } from 'react-native';
+// import Motorcycle from './src/components/Motorcycle';
+import { SafeAreaView, ImageBackground, View } from 'react-native';
+import Car from './src/components/Car';
+
+//  import Bicycle from "./src/components/Bicycle";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Image 
-      source={require('./assets/flower.png')} 
-      style={{width: 75, height: 75}}
-      />
-
-      <Text>Nama : Erdiana Ragil Syawala</Text>
-      <Text>Kelas : TI-21-PA</Text>
-      <Text>NPM : 212310045</Text>
-      <StatusBar style="auto" />
-    </View>
+    <View>
+     <ImageBackground 
+        source={{ 
+          uri= "https://kis.ibik.ac.id/environment/ibik/images/background.jpg"
+       </View>
+       }}
+       resizeMode="cover"
+       style={{ flex: 1 }}
+     >
+       <SafeAreaView>
+          <Car/>
+       </SafeAreaView>
+     </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+   
+      
+      {/* <Motorcycle/>
+      <Bicycle/>
+      <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+      </View> */}
